@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right, #87ceeb, #ffffff);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .tarjeta {
+    background: rgb(245, 246, 247);
+    border: 10px dashed #fdd835;
+    border-radius: 25px;
+    padding: 2rem;
+    margin: 5% auto;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    animation: flotar 5s ease-in-out infinite;
+  }
+  
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  h1 {
+    color: #ff4081;
+  }
+  
+  .nombre {
+    color: #f57f17;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  
+  .bob {
+    width: 180px;
+    animation: saltar 1.5s infinite;
+  }
+  
+  @keyframes saltar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  button {
+    margin-top: 15px;
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    background-color: #fff176;
+  }
+  
+  a {
+    color: #1565c0;
+    text-decoration: underline;
+  }
+  
+  .regalo {
+    background: rgba(255, 248, 225, 0.9);
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px dotted #ff9800;
+  }
+  
+  .alias {
+    color: #d84315;
+    font-size: 1.2em;
+  }
+  
+  /* Burbujas animadas */
+  .burbujas span {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: subirBurbujas 10s infinite ease-in;
+    opacity: 0.6;
+  }
+  
+  .burbujas span:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  .burbujas span:nth-child(2) {
+    width: 25px;
+    height: 25px;
+    left: 25%;
+    animation-delay: 2s;
+  }
+  .burbujas span:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 40%;
+    animation-delay: 4s;
+  }
+  .burbujas span:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 60%;
+    animation-delay: 1s;
+  }
+  .burbujas span:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    left: 75%;
+    animation-delay: 3s;
+  }
+  .burbujas span:nth-child(6),
+  .burbujas span:nth-child(7),
+  .burbujas span:nth-child(8),
+  .burbujas span:nth-child(9),
+  .burbujas span:nth-child(10) {
+    width: 15px;
+    height: 15px;
+    left: calc(10% * var(--i));
+    animation-delay: calc(1s * var(--i));
+  }
+  
+  @keyframes subirBurbujas {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-120vh) scale(1.2);
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .tarjeta {
+      padding: 1.5rem;
+      width: 90%;
+    }
+  
+    h1 {
+      font-size: 1.4rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .bob {
+      width: 100px;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    .alias {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Cumple de Maximo!</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Música -->
+  <button id="playMusic">🎵 Activar Música</button>
+  <audio id="musica" autoplay loop>
+    <source src="assets/musica.mp.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.  
+  </audio>
+
+  <!-- Burbujas animadas -->
+  <div class="burbujas">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Tarjeta -->
+  <div class="tarjeta">
+    <img src="assets/bob mmm.gif" alt="Bob Esponja" class="bob"/>
+    <h1>¡Estás invitado al cumple de <span class="nombre">Maximo</span>!</h1>
+    <p><strong>📅 Cuándo:</strong> 19 de octubre- 17:00 hs</p>
+    <p><strong>📍 Dónde:</strong> <a href="https://maps.google.com/?q=Tinogasta, Catamarca" target="_blank">Fondo de Bikini (click para ver)</a></p>
+    
+    <button onclick="confirmarAsistencia()">✅ Confirmar asistencia</button>
+
+    <div class="regalo">
+      <h3>🎁 ¿Querés hacer un regalito?</h3>
+      <p>Podés enviar un obsequio a:</p>
+      <p><strong>Alias:</strong> <span class="alias">lauthekill.mp</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
